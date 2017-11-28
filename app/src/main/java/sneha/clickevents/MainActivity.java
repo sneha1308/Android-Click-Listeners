@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button button, this_btn;
+    private Button button, this_btn, other_class_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //This
         this_btn = findViewById(R.id.this_btn);
         this_btn.setOnClickListener(this);
+        // Other class id
+        other_class_btn = findViewById(R.id.other_class_btn);
+        other_class_btn.setOnClickListener(new ClickListener());
     }
 
 
@@ -38,5 +41,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClickXml(View view) {
         Toast.makeText(this, "I am in XML....!", Toast.LENGTH_SHORT).show();
+    }
+
+
+    class ClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(MainActivity.this, "I am defined in another class....!", Toast.LENGTH_SHORT).show();
+
+        }
     }
 }
