@@ -7,7 +7,13 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button button, this_btn, other_class_btn;
+    private Button button, this_btn, other_class_btn, field_btn;
+    private View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(MainActivity.this, "I am a field..!", Toast.LENGTH_SHORT).show();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Other class id
         other_class_btn = findViewById(R.id.other_class_btn);
         other_class_btn.setOnClickListener(new ClickListener());
+
+        // field button
+        field_btn = findViewById(R.id.field_btn);
+        field_btn.setOnClickListener(mOnClickListener);
     }
 
 

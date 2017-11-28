@@ -33,6 +33,7 @@
         android:text="other class" />
 
     <Button
+        android:id="@+id/field_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="field" />
