@@ -15,14 +15,16 @@
         android:text="Anonymous" />
 
     <Button
+        android:id="@+id/this_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="this" />
 
     <Button
+        android:id="@+id/xml_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="xml" />
+        android:text="xml"/>
 
     <Button
         android:layout_width="wrap_content"
